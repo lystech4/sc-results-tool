@@ -1,0 +1,237 @@
+/*
+ANTD OVERRIDE
+*/
+
+.ant-card-body,
+.ant-collapse-content-box {
+  overflow-x: auto;
+}
+
+/*
+ANTD OVERRIDE
+*/
+
+.red {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.a-center {
+    align-items: center;
+  }
+
+  &.j-center {
+    justify-content: center;
+  }
+
+  &.j-between {
+    justify-content: space-between;
+  }
+
+  &.j-end {
+    justify-content: flex-end;
+  }
+
+  &.j-start {
+    justify-content: flex-start;
+  }
+
+  &.j-around {
+    justify-content: space-around;
+  }
+
+  &.j-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &.column,
+  &.col {
+    flex-direction: column;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.column-reverse,
+  &.col-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.w-content {
+  width: fit-content;
+}
+
+// loop for gap 0 - 1000
+@for $i from 0 through 1000 {
+  .opacity-#{$i} {
+    opacity: $i * 0.01;
+  }
+
+  .z-#{$i} {
+    z-index: #{$i};
+  }
+
+  .w-#{$i}-p {
+    width: 0% + $i;
+  }
+
+  .w-#{$i}-vw {
+    width: #{$i}vw;
+  }
+
+  .h-#{$i}-vh {
+    height: #{$i}vh;
+  }
+
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  .p-#{$i}-i {
+    padding-left: #{$i}px !important;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .pl-#{$i}-i {
+    padding-left: #{$i}px !important;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .pr-#{$i}-i {
+    padding-right: #{$i}px !important;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pt-#{$i}-i {
+    padding-top: #{$i}px !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pb-#{$i}-i {
+    padding-bottom: #{$i}px !important;
+  }
+
+  .t-all-#{$i} {
+    transition: all #{$i * 0.1}s ease-in-out;
+  }
+
+  .w-#{$i} {
+    width: #{$i}px;
+  }
+
+  .w-#{$i}-p {
+    width: 0% + #{$i};
+  }
+
+  .h-#{$i} {
+    height: #{$i}px;
+  }
+
+  .min-w-#{$i} {
+    min-width: #{$i}px;
+  }
+
+  .min-h-#{$i} {
+    min-height: #{$i}px;
+  }
+
+  .max-w-#{$i} {
+    max-width: #{$i}px;
+  }
+
+  .max-h-#{$i} {
+    max-height: #{$i}px;
+  }
+
+  .text-size-#{$i} {
+    font-size: #{$i}px;
+  }
+
+  .absolute,
+  .fixed {
+    &.top--#{$i} {
+      top: -#{$i}px;
+    }
+
+    &.bottom--#{$i} {
+      bottom: -#{$i}px;
+    }
+
+    &.left--#{$i} {
+      left: -#{$i}px;
+    }
+
+    &.right--#{$i} {
+      right: -#{$i}px;
+    }
+
+    &.top-#{$i} {
+      top: #{$i}px;
+    }
+
+    &.bottom-#{$i} {
+      bottom: #{$i}px;
+    }
+
+    &.left-#{$i} {
+      left: #{$i}px;
+    }
+
+    &.right-#{$i} {
+      right: #{$i}px;
+    }
+  }
+}

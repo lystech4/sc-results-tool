@@ -1,0 +1,501 @@
+//$bg: rgb(69, 51, 113);
+$bg: #fef4ee;
+$card-border-width: 2px;
+$primary: #eb5e0f;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  background-color: $bg;
+  font-family: "Poppins", sans-serif;
+}
+
+.team-scores {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#page-header {
+  .title {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 250px;
+  }
+}
+
+.file-sheets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .sheets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    button,
+    .ant-btn {
+      &.selected {
+        font-weight: bold;
+        background-color: $primary !important;
+        color: white !important;
+        border: 1px solid white;
+
+        span {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+// Styles pour les Cards Ant Design
+.file-management-card {
+  margin-bottom: 20px;
+  border-left: $card-border-width solid #3b82f6 !important; // Bleu subtil
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-bottom: 1px solid #cbd5e1;
+
+    .ant-card-head-title {
+      color: #1e40af;
+      font-weight: 600;
+    }
+  }
+
+  .ant-card-body {
+    padding: 20px;
+
+    @include small {
+      padding: 15px;
+    }
+  }
+
+  .upload-section,
+  .file-info-section,
+  .sheet-selection-section {
+    margin-bottom: 20px;
+
+    h4 {
+      margin: 0 0 15px 0;
+      font-size: 1.1em;
+      font-weight: 600;
+      padding-bottom: 8px;
+    }
+  }
+
+  .sheet-selection-section {
+    margin-bottom: 0;
+  }
+
+  .file-info-section {
+    .ant-collapse {
+      border: none;
+      background: transparent;
+
+      .ant-collapse-item {
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        margin-bottom: 0;
+
+        .ant-collapse-header {
+          background-color: #f8f9fa;
+          border-radius: 6px 6px 0 0;
+          padding: 12px 16px;
+          font-weight: 500;
+          color: #333;
+
+          &:hover {
+            background-color: #e9ecef;
+          }
+        }
+
+        .ant-collapse-content {
+          border-radius: 0 0 6px 6px;
+          border-top: 1px solid #e8e8e8;
+
+          .ant-collapse-content-box {
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .file-sheets {
+    gap: 15px;
+
+    span {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .sheets {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+
+      button,
+      .ant-btn {
+        &.selected {
+          font-weight: bold;
+          background-color: rgb(37, 37, 37) !important;
+          color: white !important;
+          border: 1px solid white;
+
+          span {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+
+  .columns-section {
+    margin-bottom: 20px;
+
+    .ant-collapse {
+      border: none;
+      background: transparent;
+
+      .ant-collapse-item {
+        border: 1px solid #e8e8e8;
+        border-radius: 6px;
+        margin-bottom: 0;
+
+        .ant-collapse-header {
+          background-color: #f8f9fa;
+          border-radius: 6px 6px 0 0;
+          padding: 12px 16px;
+          font-weight: 500;
+          color: #333;
+
+          &:hover {
+            background-color: #e9ecef;
+          }
+        }
+
+        .ant-collapse-content {
+          border-radius: 0 0 6px 6px;
+          border-top: 1px solid #e8e8e8;
+
+          .ant-collapse-content-box {
+            padding: 16px;
+          }
+        }
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      input[type="checkbox"] {
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 0.9em;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.config-actions-card {
+  margin-bottom: 20px;
+  border-left: $card-border-width solid #10b981 !important; // Vert subtil
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-bottom: 1px solid #a7f3d0;
+
+    .ant-card-head-title {
+      color: #047857;
+      font-weight: 600;
+    }
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+
+  .configuration-manager-section {
+    margin-bottom: 20px;
+
+    h4 {
+      margin: 0 0 15px 0;
+      color: #047857;
+      font-weight: 600;
+    }
+  }
+
+  .config-section,
+  .actions-section {
+    margin-bottom: 20px;
+
+    h4 {
+      margin: 0 0 15px 0;
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 8px;
+    }
+  }
+
+  .actions-section {
+    margin-bottom: 0;
+  }
+
+  .config-section {
+    .ant-select {
+      .ant-select-selector {
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        padding: 4px 8px;
+
+        &:hover {
+          border-color: #40a9ff;
+        }
+
+        &:focus,
+        &:focus-within {
+          border-color: #40a9ff;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+      }
+
+      .ant-select-selection-item {
+        color: #333;
+        font-weight: 500;
+      }
+
+      .ant-select-selection-placeholder {
+        color: #999;
+      }
+    }
+  }
+}
+
+.ranking-card {
+  margin-bottom: 20px;
+  border-left: $card-border-width solid #f59e0b !important; // Orange subtil
+  background: linear-gradient(135deg, #fefbf0 0%, #fef3c7 100%);
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border-bottom: 1px solid #fdba74;
+
+    .ant-card-head-title {
+      color: #d97706;
+      font-weight: 600;
+    }
+  }
+
+  .ant-card-body {
+    padding: 20px;
+  }
+}
+
+// Nouvelles sections pour la gestion des fichiers et configurations
+.file-management-section {
+  .management-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    align-items: stretch;
+
+    .upload-section,
+    .config-load-section {
+      flex: 1;
+      min-width: 300px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+      @include small {
+        padding: 5px;
+      }
+
+      h4 {
+        margin-bottom: 12px;
+        color: #1e40af;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    .config-load-section {
+      .config-load-section {
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Amélioration des styles généraux
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .ant-card-head {
+    background-color: #fafafa;
+    border-bottom: 1px solid #e8e8e8;
+
+    .ant-card-head-title {
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  .ant-card-body {
+    background-color: white;
+  }
+}
+
+// Effets de hover spécifiques pour chaque carte
+.file-management-card:hover {
+  border-left-color: #2563eb !important;
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  }
+}
+
+.config-actions-card:hover {
+  border-left-color: #059669 !important;
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  }
+}
+
+.ranking-card:hover {
+  border-left-color: #dc2626 !important;
+
+  .ant-card-head {
+    background: linear-gradient(135deg, #fed7aa 0%, #fbbf24 100%);
+  }
+}
+
+.column-rename-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 5px;
+
+  .column-name {
+    min-width: 120px;
+    font-weight: 500;
+    color: #333;
+
+    @include small {
+      min-width: 80px;
+    }
+  }
+
+  .ant-input {
+    width: 200px;
+  }
+
+  .ant-btn {
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.column-config-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .section-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .rename-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+  }
+}
+
+.custom-columns-controls {
+  display: flex;
+  gap: 10px;
+
+  .ant-btn {
+    border-style: dashed;
+    border-color: #1890ff;
+    color: #1890ff;
+
+    &:hover {
+      border-color: #40a9ff;
+      color: #40a9ff;
+    }
+  }
+}
+
+.help-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+
+  code {
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+}
+
+.columns-index-help {
+  font-size: 0.8em;
+  color: #999;
+  margin-bottom: 15px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border-left: 3px solid #1890ff;
+}
+
+#team-scores-table {
+  width: fit-content;
+}

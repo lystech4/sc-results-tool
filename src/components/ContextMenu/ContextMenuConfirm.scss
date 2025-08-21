@@ -1,0 +1,90 @@
+.context-menu-confirm {
+  background: #2d2d30;
+  border: 1px solid #464647;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.548);
+  min-width: 250px;
+  animation: confirmSlideIn 0.2s ease-out;
+
+  .confirm-content {
+    padding: 16px;
+
+    .confirm-title {
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .confirm-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+
+      .ant-btn {
+        height: 32px;
+        padding: 0 16px;
+        font-size: 13px;
+        border-radius: 6px;
+
+        // Bouton Annuler - style secondaire sombre
+        &:not(.ant-btn-primary) {
+          background-color: #404042;
+          border-color: #464647;
+          color: #cccccc;
+
+          &:hover {
+            background-color: #4a4a4c;
+            border-color: #5a5a5c;
+            color: #ffffff;
+          }
+        }
+
+        // Bouton Confirmer - style danger
+        &.ant-btn-primary.ant-btn-dangerous {
+          background-color: #d32f2f;
+          border-color: #d32f2f;
+          color: #ffffff;
+
+          &:hover {
+            background-color: #f44336;
+            border-color: #f44336;
+          }
+
+          &:active {
+            background-color: #c62828;
+            border-color: #c62828;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes confirmSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+// Animation de sortie
+.context-menu-confirm.hidden {
+  animation: confirmSlideOut 0.15s ease-in forwards;
+}
+
+@keyframes confirmSlideOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+}
